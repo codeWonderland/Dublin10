@@ -1,4 +1,7 @@
 h2.blue-header {
   color: #236192; }
 
+div.story-mem p {
+  font-size: calc(12px + 1.5vw); }
+
 /*# sourceMappingURL=index.css.map */

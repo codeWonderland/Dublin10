@@ -3,3 +3,9 @@ h2.blue-header
 {
   color: #236192;
 }
+
+div.story-mem p
+{
+  font-size: calc(12px + 1.5vw); // The static part defined the minimum, and if it goes over a certain point we will fade it
+  // TODO: Add fade stuff and get correct vw value for calc
+}

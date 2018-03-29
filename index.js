@@ -99,28 +99,67 @@ function waitForJQuery()
 
                     $(memories).each(function(memory)
                     {
-                        /* TODO: This whole part should essentially determine the type of memory and if it is one, the other, or both send the data to the formatMemoryHTML function */
-                    })
+                        if (memory.gsx$memory.$t != "" && memory.gsx$photo.$t != "")
+                        {
+                            memoriesString += formatMemoryHTML(memory, 'both');
+                        }
+                        else if (memory.gsx$memory.$t != "" && memory.gsx$photo.$t == "")
+                        {
+                            memoriesString += formatMemoryHTML(memory, 'story');
+                        }
+                        else if (memory.gsx$memory.$t == "" && memory.gsx$photo.$t != "")
+                        {
+                            memoriesString += formatMemoryHTML(memory, 'photo');
+                        }
+                        else
+                        {
+                            console.log("Error parsing memory: " + memory)
+                        }
+                    });
+
+                    $('div.memory-container')[0].innerHTML = memoriesString;
                 }
 
                 function formatMemoryHTML(memory, type)
                 {
+                    memHTML = "";
+                    classList = "";
+
                     switch(type)
                     {
                         case 'photo':
-                            // TODO: Photo HTML
+                            memHTML = '' +
+                                '<div class="memory photo-mem">' +
+                                '   <img src="' + formatMemoryHTML(memory.gsx$photo.$t) + '" alt="dublin memory">' +
+                                '</div>';
                             break;
                         case 'story':
                             // TODO: Story HTML
                             break;
+                        case 'both':
+                            // TODO: HTML for both Photo and Story
+                            memHTML = '' +
+                                '<div class="memory photo-mem">' +
+                                '   <img src="' + formatMemoryHTML(memory.gsx$photo.$t) + '" alt="dublin memory">' +
+                                '   <div class="hover-story">' +
+                                '       ' +
+                                '   </div>' +
+                                '</div>';
+                            break;
                         default:
+                            console.log("Invalid type sent to formatMemoryHTML");
                             break;
                     }
+
+                    return memHTML;
                 }
 
                 function formatGImageURL(url)
                 {
-                    return url.replace("open", "uc");
+                    if (url.substring(0, 33) === "https://drive.google.com/open?id=")
+                        return url.replace("open", "uc");
+                    else
+                        return url
                 }
             });
         })(jQuery);
