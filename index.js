@@ -66,7 +66,7 @@ function waitForJQuery()
                         var storedData =
                             {
                                 records: data.feed.entry,
-                                date: new Data.getTime()
+                                date: (new Date).getTime()
                             };
 
                         if (Modernizr.localstorage && JSON && JSON.stringify)
