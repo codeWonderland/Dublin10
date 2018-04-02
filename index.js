@@ -145,16 +145,18 @@ function waitForJQuery()
                             // TODO: Story HTML
                             memHTML = '' +
                                 '<div class="memory story-mem">' +
-                                '   <p>' + memory.gsx$photo.$t + '</p>' +
+                                '   <p>' + memory.gsx$memory.$t + '</p>' +
                                 '</div>';
                             break;
                         case 'both':
                             // TODO: HTML for both Photo and Story
                             memHTML = '' +
-                                '<div class="memory photo-mem">' +
+                                '<div class="memory both-mem">' +
                                 '   <img src="' + formatGImageURL(memory.gsx$photo.$t) + '" alt="dublin memory">' +
                                 '   <div class="hover-story">' +
-                                '       ' +
+                                '       <div class="fade-container">' +
+                                '           <p>' + memory.gsx$memory.$t + '</p>' +
+                                '       </div>' +
                                 '   </div>' +
                                 '</div>';
                             break;
