@@ -97,23 +97,31 @@ function waitForJQuery()
                     // This string will be a total build of the html that we will push to the memory container
                     var memoriesString = "<div class='memory share-memory'><a href='https://goo.gl/forms/uTKrbdy1ioRHaBoI2' target='_blank' class='green-button'>Share a memory</a></div>";
 
-                    $(memories).each(function(memory)
+                    $(memories).each(function()
                     {
-                        if (memory.gsx$memory.$t != "" && memory.gsx$photo.$t != "")
+                        try
                         {
-                            memoriesString += formatMemoryHTML(memory, 'both');
+                            if (this.gsx$memory.$t != "" && this.gsx$photo.$t != "")
+                            {
+                                memoriesString += formatMemoryHTML(this, 'both');
+                            }
+                            else if (this.gsx$memory.$t != "" && this.gsx$photo.$t == "")
+                            {
+                                memoriesString += formatMemoryHTML(this, 'story');
+                            }
+                            else if (this.gsx$memory.$t == "" && this.gsx$photo.$t != "")
+                            {
+                                memoriesString += formatMemoryHTML(this, 'photo');
+                            }
+                            else
+                            {
+                                console.log("Error parsing memory: " + this);
+                            }
                         }
-                        else if (memory.gsx$memory.$t != "" && memory.gsx$photo.$t == "")
+                        catch (e)
                         {
-                            memoriesString += formatMemoryHTML(memory, 'story');
-                        }
-                        else if (memory.gsx$memory.$t == "" && memory.gsx$photo.$t != "")
-                        {
-                            memoriesString += formatMemoryHTML(memory, 'photo');
-                        }
-                        else
-                        {
-                            console.log("Error parsing memory: " + memory)
+                            console.log("Error parsing memory: " + this);
+                            console.log("Error desc: " + e);
                         }
                     });
 
@@ -130,17 +138,21 @@ function waitForJQuery()
                         case 'photo':
                             memHTML = '' +
                                 '<div class="memory photo-mem">' +
-                                '   <img src="' + formatMemoryHTML(memory.gsx$photo.$t) + '" alt="dublin memory">' +
+                                '   <img src="' + formatGImageURL(memory.gsx$photo.$t) + '" alt="dublin memory">' +
                                 '</div>';
                             break;
                         case 'story':
                             // TODO: Story HTML
+                            memHTML = '' +
+                                '<div class="memory story-mem">' +
+                                '   <p>' + memory.gsx$photo.$t + '</p>' +
+                                '</div>';
                             break;
                         case 'both':
                             // TODO: HTML for both Photo and Story
                             memHTML = '' +
                                 '<div class="memory photo-mem">' +
-                                '   <img src="' + formatMemoryHTML(memory.gsx$photo.$t) + '" alt="dublin memory">' +
+                                '   <img src="' + formatGImageURL(memory.gsx$photo.$t) + '" alt="dublin memory">' +
                                 '   <div class="hover-story">' +
                                 '       ' +
                                 '   </div>' +
