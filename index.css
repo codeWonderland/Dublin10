@@ -66,4 +66,7 @@ div.intro-text p {
 #outer-container, #inner-container {
   background: #f6f6f6 !important; }
 
+div.story-mem p {
+  font-size: calc(12px + 1.5vw); }
+
 /*# sourceMappingURL=index.css.map */
