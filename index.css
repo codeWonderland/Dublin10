@@ -4,7 +4,6 @@ div.visit-landing-page {
   margin: auto;
   background: white; }
   div.visit-landing-page div.video-container {
-    color: #236192;
     position: relative;
     width: 100%;
     height: auto;
@@ -39,63 +38,143 @@ div.visit-landing-page {
       flex-direction: column;
       padding: 2rem;
       text-align: center; }
-      div.visit-landing-page div.video-container div.video-overlay div.top-content h2.blue-header {
-        color: #236192;
-        text-align: center; }
+      div.visit-landing-page div.video-container div.video-overlay div.top-content h2.date-header {
+        color: white;
+        text-align: center;
+        text-shadow: -2px 2px rgba(0, 0, 0, 0.6); }
       div.visit-landing-page div.video-container div.video-overlay div.button-container {
         max-width: 600px;
         display: flex;
         align-content: space-between; }
         div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button {
           background: #5cbd77;
-          padding: 7px;
           margin: 0 1rem;
-          text-transform: uppercase; }
-  @media only screen and (min-width: 768px) {
-    @supports (display: grid) {
+          text-transform: uppercase;
+          color: white;
+          border-radius: 15px;
+          padding: 0.5rem 1rem; }
+          div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button:hover {
+            text-decoration: underline; }
+  div.visit-landing-page div.intro-text {
+    background: #236192; }
+    @media only screen and (min-width: 768px) {
       div.visit-landing-page div.intro-text {
-        display: grid;
-        grid-template-columns: 150px auto; } } }
-  div.visit-landing-page div.intro-text img {
-    width: 100%;
-    height: auto; }
-  div.visit-landing-page div.intro-text p {
-    color: #fff; }
-  @media only screen and (min-width: 768px) {
-    div.visit-landing-page div.memory-container {
-      max-width: 1280px; }
-      @supports (display: grid) {
-        div.visit-landing-page div.memory-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, 300px);
-          grid-gap: 16px; } } }
-  div.visit-landing-page div.memory-container div.memory {
-    height: 450px;
-    width: 300px;
-    overflow: hidden;
-    position: relative; }
-    div.visit-landing-page div.memory-container div.memory img {
-      object-fit: cover;
+        padding: 2rem; }
+        @supports (display: grid) {
+          div.visit-landing-page div.intro-text {
+            display: grid;
+            grid-template-columns: 150px auto; } } }
+    @media only screen and (max-width: 768px) {
+      div.visit-landing-page div.intro-text {
+        padding: 1rem; } }
+    div.visit-landing-page div.intro-text img {
       width: 100%;
-      height: 100%; }
-    div.visit-landing-page div.memory-container div.memory p {
-      font-size: calc(12px + 1vw); }
-    div.visit-landing-page div.memory-container div.memory.both-mem div.hover-story {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 300px;
-      height: 450px;
-      overflow: hidden;
-      display: none;
-      background: rgba(255, 255, 255, 0.6);
-      transition: 0.2s ease-out;
-      text-align: center; }
-      div.visit-landing-page div.memory-container div.memory.both-mem div.hover-story div.fade-container {
-        margin: 2rem 2rem 4rem 2rem;
-        overflow: hidden; }
-    div.visit-landing-page div.memory-container div.memory.both-mem:hover div.hover-story {
-      display: block; }
+      height: auto; }
+    div.visit-landing-page div.intro-text p {
+      color: #fff; }
+  div.visit-landing-page div.bottom-section {
+    background: #e6e6e6;
+    padding-top: 1rem; }
+    div.visit-landing-page div.bottom-section h2.mem-header {
+      text-align: center;
+      font-size: 30px;
+      padding-bottom: 1rem; }
+    div.visit-landing-page div.bottom-section div.memory-container {
+      margin: 16px; }
+      @media only screen and (min-width: 768px) {
+        div.visit-landing-page div.bottom-section div.memory-container {
+          max-width: 1280px; }
+          @supports (display: grid) {
+            div.visit-landing-page div.bottom-section div.memory-container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, 300px);
+              grid-gap: 16px; } } }
+      div.visit-landing-page div.bottom-section div.memory-container div.memory {
+        height: 450px;
+        width: 300px;
+        overflow: hidden;
+        position: relative; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory {
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-flow: column;
+          background: #fff; }
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle {
+            width: 175px;
+            height: 175px;
+            position: relative;
+            border-radius: 50%;
+            background-color: #5cbd77;
+            margin: 1rem auto; }
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble {
+              background-color: #fff;
+              width: 100px;
+              height: 65px;
+              top: 52.5px;
+              left: 37.5px;
+              position: absolute;
+              border-radius: 10px; }
+              div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 0;
+                width: 0;
+                border-top: 17.5px solid #fff;
+                border-right: 20px solid transparent;
+                left: 17.5px;
+                bottom: -17.5px; }
+              div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble div.dot-holder {
+                width: 75px;
+                height: 7.5px;
+                margin: auto;
+                padding-left: 6px;
+                margin-top: 22.5px; }
+                div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble div.dot-holder div.dot {
+                  width: 15px;
+                  border-radius: 50%;
+                  margin: 3px;
+                  height: 15px;
+                  background-color: #5cbd77;
+                  float: left;
+                  box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.75); }
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory a.green-button {
+            background: #5cbd77;
+            margin: 0 1rem;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 15px;
+            padding: 0.5rem 1rem;
+            text-align: center; }
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory a.green-button:hover {
+              text-decoration: underline; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory p {
+          font-size: calc(12px + 1vw); }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.story-mem {
+          padding: 2rem;
+          background: #5cbd77;
+          color: white; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 300px;
+          height: 450px;
+          overflow: hidden;
+          display: none;
+          background: rgba(255, 255, 255, 0.6);
+          transition: 0.2s ease-out;
+          text-align: center; }
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story div.fade-container {
+            margin: 2rem 2rem 4rem 2rem;
+            overflow: hidden; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem:hover div.hover-story {
+          display: block; }
 
 #content.microsite {
   margin: 0 !important;

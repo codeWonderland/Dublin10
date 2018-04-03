@@ -95,7 +95,15 @@ function waitForJQuery()
                     console.log('handling memories');
 
                     // This string will be a total build of the html that we will push to the memory container
-                    var memoriesString = "<div class='memory share-memory'><a href='https://goo.gl/forms/uTKrbdy1ioRHaBoI2' target='_blank' class='green-button'>Share a memory</a></div>";
+                    var memoriesString = "<div class='memory share-memory'><div class='outer-circle'>" +
+                        "  <div class='chat-bubble'>" +
+                        "    <div class='dot-holder'>" +
+                        "      <div class='dot'></div>" +
+                        "      <div class='dot'></div>" +
+                        "      <div class='dot'></div>" +
+                        "    </div>" +
+                        "  </div>" +
+                        "</div><a href='https://goo.gl/forms/uTKrbdy1ioRHaBoI2' target='_blank' class='green-button'>Share a memory</a></div>";
 
                     $(memories).each(function()
                     {

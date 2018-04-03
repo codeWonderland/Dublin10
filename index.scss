@@ -7,7 +7,6 @@ div.visit-landing-page
 
   div.video-container
   {
-    color: #236192;
     position: relative;
     width: 100%;
     height: auto;
@@ -57,10 +56,11 @@ div.visit-landing-page
 
       div.top-content
       {
-        h2.blue-header
+        h2.date-header
         {
-          color: #236192;
+          color: white;
           text-align: center;
+          text-shadow: -2px 2px rgba(0,0,0,0.6);
         }
       }
 
@@ -73,23 +73,41 @@ div.visit-landing-page
         a.green-button
         {
           background: rgb(92,189,119);
-          padding: 7px;
           margin: 0 1rem;
           text-transform: uppercase;
+          color: white;
+          border-radius: 15px;
+          padding: 0.5rem 1rem;
+
+          &:hover
+          {
+            text-decoration: underline;
+          }
         }
       }
     }
   }
 
+
+
   div.intro-text
   {
+    background: #236192;
+
     @media only screen and (min-width: 768px)
     {
+      padding: 2rem;
+
       @supports (display: grid)
       {
         display: grid;
         grid-template-columns: 150px auto;
       }
+    }
+
+    @media only screen and (max-width: 768px)
+    {
+      padding: 1rem;
     }
 
     img
@@ -104,71 +122,167 @@ div.visit-landing-page
     }
   }
 
-  div.memory-container {
+  div.bottom-section
+  {
+    background: #e6e6e6;
+    padding-top: 1rem;
 
-    @media only screen and (min-width: 768px)
+    h2.mem-header
     {
-      max-width: 1280px;
-
-      @supports (display: grid)
-      {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 300px);
-        grid-gap: 16px;
-      }
+      text-align: center;
+      font-size: 30px;
+      padding-bottom: 1rem;
     }
 
-    div.memory
-    {
-      height: 450px;
-      width: 300px;
-      overflow: hidden;
-      position: relative;
+    div.memory-container {
 
-      img
+      margin: 16px;
+
+      @media only screen and (min-width: 768px)
       {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
+        max-width: 1280px;
 
-      p
-      {
-        font-size: calc(12px + 1vw); // The static part defined the minimum, and if it goes over a certain point we will fade it
-      }
-
-      &.story-mem
-      {
-
-      }
-
-      &.both-mem
-      {
-        div.hover-story
+        @supports (display: grid)
         {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 300px;
-          height: 450px;
-          overflow: hidden;
-          display: none;
-          background: rgba(255,255,255, 0.6);
-          transition: 0.2s ease-out;
-          text-align: center;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, 300px);
+          grid-gap: 16px;
+        }
+      }
 
-          div.fade-container
+      div.memory
+      {
+        height: 450px;
+        width: 300px;
+        overflow: hidden;
+        position: relative;
+
+        &.share-memory
+        {
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-flow: column;
+          background: #fff;
+
+          div.outer-circle
           {
-            margin: 2rem 2rem 4rem 2rem;
-            overflow: hidden;
+            width: 175px;
+            height: 175px;
+            position: relative;
+            border-radius: 50%;
+            background-color: rgb(92,189,119);
+            margin: 1rem auto;
+
+            div.chat-bubble
+            {
+              background-color: #fff;
+              width: 100px;
+              height: 65px;
+              top: 52.5px;
+              left: 37.5px;
+              position: absolute;
+              border-radius: 10px;
+
+              &:after
+              {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 0;
+                width: 0;
+                border-top: 17.5px solid #fff;
+                border-right: 20px solid transparent;
+                left: 17.5px;
+                bottom: -17.5px;
+              }
+
+              div.dot-holder
+              {
+                width: 75px;
+                height: 7.5px;
+                margin: auto;
+                padding-left: 6px;
+                margin-top: 22.5px;
+
+                div.dot
+                {
+                  width: 15px;
+                  border-radius: 50%;
+                  margin: 3px;
+                  height: 15px;
+                  background-color: rgb(92,189,119);
+                  float: left;
+                  box-shadow: 0.5px 1px 1px rgba(0,0,0,0.75)
+                }
+              }
+            }
+          }
+
+          a.green-button
+          {
+            background: rgb(92,189,119);
+            margin: 0 1rem;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 15px;
+            padding: 0.5rem 1rem;
+            text-align: center;
+
+            &:hover
+            {
+              text-decoration: underline;
+            }
           }
         }
 
-        &:hover
+        img
+        {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+
+        p
+        {
+          font-size: calc(12px + 1vw); // The static part defined the minimum, and if it goes over a certain point we will fade it
+        }
+
+        &.story-mem
+        {
+          padding: 2rem;
+          background: #5cbd77;
+          color: white;
+        }
+
+        &.both-mem
         {
           div.hover-story
           {
-            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 450px;
+            overflow: hidden;
+            display: none;
+            background: rgba(255,255,255, 0.6);
+            transition: 0.2s ease-out;
+            text-align: center;
+
+            div.fade-container
+            {
+              margin: 2rem 2rem 4rem 2rem;
+              overflow: hidden;
+            }
+          }
+
+          &:hover
+          {
+            div.hover-story
+            {
+              display: block;
+            }
           }
         }
       }
