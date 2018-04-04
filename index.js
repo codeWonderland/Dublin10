@@ -153,7 +153,10 @@ function waitForJQuery()
                             // TODO: Story HTML
                             memHTML = '' +
                                 '<div class="memory story-mem">' +
+                                '   <div class="fade-container">' +
                                 '   <p>' + memory.gsx$memory.$t + '</p>' +
+                                '   </div>' +
+                                '   <p>(Click to see full story)</p>' +
                                 '</div>';
                             break;
                         case 'both':
@@ -165,6 +168,7 @@ function waitForJQuery()
                                 '       <div class="fade-container">' +
                                 '           <p>' + memory.gsx$memory.$t + '</p>' +
                                 '       </div>' +
+                                '       <p>(Click to see full story)</p>' +
                                 '   </div>' +
                                 '</div>';
                             break;

@@ -1,0 +1,219 @@
+div.dublin-schedule-page
+{
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  background: #e6e6e6;
+  display: flex;
+  flex-flow: column;
+
+  img.dublin-logo
+  {
+	width: 250px;
+	height: auto;
+	margin: 2rem auto;
+	align-self: center;
+  }
+
+  h1.blue-header, h1#lodging-options
+  {
+	text-transform: uppercase;
+	color: #236192;
+	text-align: center;
+  }
+
+  p.intro-text
+  {
+	color: #236192;
+	font-size: 20px;
+	text-align: center;
+	max-width: 500px;
+	align-self: center;
+	margin-bottom: 2rem;
+  }
+
+  a[href="#lodging-options"]
+  {
+	color: #5cbd77;
+	text-transform: uppercase;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: underline;
+  }
+
+  div.schedule
+  {
+	margin: 1rem;
+
+	@supports (display: grid)
+	{
+	  display: grid;
+	  grid-template-columns: 1fr 2fr;
+	  grid-gap: 0.5rem;
+
+	  div.schedule-date
+	  {
+		grid-column: span 2;
+	  }
+	}
+
+	div.schedule-date
+	{
+	  width: 100%;
+	  padding-top: 1rem;
+	  padding-bottom: 1rem;
+	  background: #236192;
+	  margin: 0.5rem;
+
+	  @supports (display: grid)
+	  {
+		margin: 0;
+	  }
+
+	  h2
+	  {
+		color: #fff;
+		text-align: center;
+		text-transform: uppercase;
+	  }
+	}
+
+	div.schedule-time, div.schedule-details
+	{
+	  width: 100%;
+	  margin: 0.5rem;
+	  background: white;
+	  padding: 1rem;
+
+	  @supports (display: grid)
+	  {
+		margin: 0;
+	  }
+
+	  p:first-child, em
+	  {
+		color: #236192;
+	  }
+	}
+  }
+
+  div.hotel-options
+  {
+	div
+	{
+	  margin: 0.5rem;
+	  padding: 1rem;
+	  background: white;
+
+	  &:nth-child(even)
+	  {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+	  }
+
+	  p:first-child
+	  {
+		color: #236192;
+	  }
+
+	  a
+	  {
+		background: rgb(92,189,119);
+		text-transform: uppercase;
+		color: white;
+		border-radius: 15px;
+		padding: 0.5rem 1rem;
+		height: 2.5rem;
+
+		@media only screen and (min-width: 768px)
+		{
+		  margin: 0 1rem;
+		}
+
+		@media only screen and (max-width: 768px)
+		{
+		  margin: 0.5rem;
+		}
+
+		&:hover
+		{
+		  text-decoration: underline;
+		}
+	  }
+	}
+
+	@media only screen and (min-width: 768px)
+	{
+	  @supports (display: grid)
+	  {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		grid-gap: 0.5rem;
+
+		div
+		{
+		  margin: 0;
+		}
+	  }
+	}
+  }
+}
+
+#content.microsite
+{
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+#side-nav
+{
+  display: none;
+}
+
+.userMarkup
+{
+  @media only screen and (min-width: 768px)
+  {
+	padding: 0!important;
+  }
+
+  @media only screen and (max-width: 768px)
+  {
+	padding: 20px 0 !important;
+  }
+
+  margin-top: -1rem!important;
+}
+
+#column-container-1
+{
+  width: 100%;
+  max-width: unset;
+  margin: 0;
+}
+
+#content-wrapper
+{
+  margin-top: -8px;
+}
+
+#outer-container, #inner-container
+{
+  background: #e6e6e6!important;
+}
+
+.noMastHead #content.microsite, .microsite.noMastHead #content.microsite
+{
+  margin-top: 0 !important;
+}
+
+.microsite-ctas-wrapper
+{
+  z-index: 1000;
+}
+
+div#breadcrumbs
+{
+  display: none;
+}

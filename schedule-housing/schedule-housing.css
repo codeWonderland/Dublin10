@@ -1,0 +1,132 @@
+div.dublin-schedule-page {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  background: #e6e6e6;
+  display: flex;
+  flex-flow: column; }
+  div.dublin-schedule-page img.dublin-logo {
+    width: 250px;
+    height: auto;
+    margin: 2rem auto;
+    align-self: center; }
+  div.dublin-schedule-page h1.blue-header, div.dublin-schedule-page h1#lodging-options {
+    text-transform: uppercase;
+    color: #236192;
+    text-align: center; }
+  div.dublin-schedule-page p.intro-text {
+    color: #236192;
+    font-size: 20px;
+    text-align: center;
+    max-width: 500px;
+    align-self: center;
+    margin-bottom: 2rem; }
+  div.dublin-schedule-page a[href="#lodging-options"] {
+    color: #5cbd77;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline; }
+  div.dublin-schedule-page div.schedule {
+    margin: 1rem; }
+    @supports (display: grid) {
+      div.dublin-schedule-page div.schedule {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 0.5rem; }
+        div.dublin-schedule-page div.schedule div.schedule-date {
+          grid-column: span 2; } }
+    div.dublin-schedule-page div.schedule div.schedule-date {
+      width: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background: #236192;
+      margin: 0.5rem; }
+      @supports (display: grid) {
+        div.dublin-schedule-page div.schedule div.schedule-date {
+          margin: 0; } }
+      div.dublin-schedule-page div.schedule div.schedule-date h2 {
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase; }
+    div.dublin-schedule-page div.schedule div.schedule-time, div.dublin-schedule-page div.schedule div.schedule-details {
+      width: 100%;
+      margin: 0.5rem;
+      background: white;
+      padding: 1rem; }
+      @supports (display: grid) {
+        div.dublin-schedule-page div.schedule div.schedule-time, div.dublin-schedule-page div.schedule div.schedule-details {
+          margin: 0; } }
+      div.dublin-schedule-page div.schedule div.schedule-time p:first-child, div.dublin-schedule-page div.schedule div.schedule-time em, div.dublin-schedule-page div.schedule div.schedule-details p:first-child, div.dublin-schedule-page div.schedule div.schedule-details em {
+        color: #236192; }
+  div.dublin-schedule-page div.hotel-options div {
+    margin: 0.5rem;
+    padding: 1rem;
+    background: white; }
+    div.dublin-schedule-page div.hotel-options div:nth-child(even) {
+      display: flex;
+      justify-content: center;
+      align-content: center; }
+    div.dublin-schedule-page div.hotel-options div p:first-child {
+      color: #236192; }
+    div.dublin-schedule-page div.hotel-options div a {
+      background: #5cbd77;
+      text-transform: uppercase;
+      color: white;
+      border-radius: 15px;
+      padding: 0.5rem 1rem;
+      height: 2.5rem; }
+      @media only screen and (min-width: 768px) {
+        div.dublin-schedule-page div.hotel-options div a {
+          margin: 0 1rem; } }
+      @media only screen and (max-width: 768px) {
+        div.dublin-schedule-page div.hotel-options div a {
+          margin: 0.5rem; } }
+      div.dublin-schedule-page div.hotel-options div a:hover {
+        text-decoration: underline; }
+  @media only screen and (min-width: 768px) {
+    @supports (display: grid) {
+      div.dublin-schedule-page div.hotel-options {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 0.5rem; }
+        div.dublin-schedule-page div.hotel-options div {
+          margin: 0; } } }
+
+#content.microsite {
+  margin: 0 !important;
+  width: 100% !important; }
+
+#side-nav {
+  display: none; }
+
+.userMarkup {
+  margin-top: -1rem !important; }
+  @media only screen and (min-width: 768px) {
+    .userMarkup {
+      padding: 0 !important; } }
+  @media only screen and (max-width: 768px) {
+    .userMarkup {
+      padding: 20px 0 !important; } }
+
+#column-container-1 {
+  width: 100%;
+  max-width: unset;
+  margin: 0; }
+
+#content-wrapper {
+  margin-top: -8px; }
+
+#outer-container, #inner-container {
+  background: #e6e6e6 !important; }
+
+.noMastHead #content.microsite, .microsite.noMastHead #content.microsite {
+  margin-top: 0 !important; }
+
+.microsite-ctas-wrapper {
+  z-index: 1000; }
+
+div#breadcrumbs {
+  display: none; }
+
+/*# sourceMappingURL=schedule-housing.css.map */
