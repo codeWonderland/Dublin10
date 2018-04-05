@@ -10,7 +10,8 @@ div.visit-landing-page
     position: relative;
     width: 100%;
     height: auto;
-    max-height: 720px;
+    max-height: 650px;
+    overflow: hidden;
 
     @media only screen and (min-width: 786px)
     {
@@ -41,7 +42,7 @@ div.visit-landing-page
     div.video-overlay
     {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: center;
       flex-direction: column;
       padding: 2rem;
@@ -98,7 +99,10 @@ div.visit-landing-page
           background: rgb(92,189,119);
           text-transform: uppercase;
           color: white;
-          border-radius: 15px;
+          border-radius: 50px;
+          font-size: 19px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
           padding: 0.5rem 1rem;
 
           @media only screen and (min-width: 768px)
@@ -475,4 +479,19 @@ div.visit-landing-page
 .microsite-ctas-wrapper
 {
   z-index: 1000;
+}
+
+.remodal
+{
+  max-width: 768px;
+
+  p
+  {
+    text-align: left;
+  }
+
+  br
+  {
+    line-height: 3;
+  }
 }

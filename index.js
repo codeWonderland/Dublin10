@@ -145,30 +145,28 @@ function waitForJQuery()
                     {
                         case 'photo':
                             memHTML = '' +
-                                '<div class="memory photo-mem">' +
+                                '<div class="memory photo-mem" onclick="openPhotoMem(\'' + formatGImageURL(memory.gsx$photo.$t) + '\')">' +
                                 '   <img src="' + formatGImageURL(memory.gsx$photo.$t) + '" alt="dublin memory">' +
                                 '</div>';
                             break;
                         case 'story':
-                            // TODO: Story HTML
                             memHTML = '' +
-                                '<div class="memory story-mem">' +
+                                '<div class="memory story-mem" onclick="openStoryMem(this)">' +
                                 '   <div class="fade-container">' +
-                                '   <p>' + memory.gsx$memory.$t + '</p>' +
+                                '   <p class="story">' + memory.gsx$memory.$t.replace(/\n(?=[A-Z])/g, '<br>') + '</p>' +
                                 '   </div>' +
-                                '   <p>(Click to see full story)</p>' +
+                                '   <p style="font-size: 16px;">(Click to see full story)</p>' +
                                 '</div>';
                             break;
                         case 'both':
-                            // TODO: HTML for both Photo and Story
                             memHTML = '' +
-                                '<div class="memory both-mem">' +
+                                '<div class="memory both-mem" onclick="openBothMem(this, ' + formatGImageURL(memory.gsx$photo.$t) + ')">' +
                                 '   <img src="' + formatGImageURL(memory.gsx$photo.$t) + '" alt="dublin memory">' +
                                 '   <div class="hover-story">' +
                                 '       <div class="fade-container">' +
-                                '           <p>' + memory.gsx$memory.$t + '</p>' +
+                                '           <p class="story">' + memory.gsx$memory.$t.replace(/\n(?=[A-Z])/g, '<br>') + '</p>' +
                                 '       </div>' +
-                                '       <p>(Click to see full story)</p>' +
+                                '       <p style="font-size: 16px;">(Click to see full story)</p>' +
                                 '   </div>' +
                                 '</div>';
                             break;
@@ -178,14 +176,6 @@ function waitForJQuery()
                     }
 
                     return memHTML;
-                }
-
-                function formatGImageURL(url)
-                {
-                    if (url.substring(0, 33) === "https://drive.google.com/open?id=")
-                        return url.replace("open", "uc");
-                    else
-                        return url
                 }
             });
         })(jQuery);
@@ -200,3 +190,38 @@ function waitForJQuery()
 }
 
 waitForJQuery();
+
+function formatGImageURL(url)
+{
+    if (url.substring(0, 33) === "https://drive.google.com/open?id=")
+        return url.replace("open", "uc");
+    else
+        return url;
+}
+
+function openBothMem(memory, photo)
+{
+    var html = '<img style="width: 100%; height: auto;" src="' + photo + '" alt="memory">' +
+        '<p>' + $(memory).find('p.story')[0].innerHTML + '</p>';
+    openRemodal(html);
+}
+
+function openPhotoMem(photo)
+{
+    var html = '<img style="width: 100%; height: auto;" src="' + photo + '" alt="memory">';
+    openRemodal(html);
+}
+
+function openStoryMem(memory)
+{
+    var html = '<p>' + $(memory).find('p.story')[0].innerHTML + '</p>';
+    openRemodal(html);
+}
+
+function openRemodal(content)
+{
+    $memModal = $('div.remodal[data-remodal-id="mem-modal"]');
+    $memModal.find('div.content')[0].innerHTML = content;
+    var mymodal = $memModal.remodal();
+    mymodal.open();
+}
