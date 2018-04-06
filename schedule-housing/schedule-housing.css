@@ -18,15 +18,19 @@ div.dublin-schedule-page {
     color: #236192;
     font-size: 20px;
     text-align: center;
-    max-width: 500px;
+    max-width: 650px;
+    font-weight: 500;
     align-self: center;
     margin-bottom: 2rem; }
-  div.dublin-schedule-page a[href="#lodging-options"] {
-    color: #5cbd77;
+  div.dublin-schedule-page a.lodge-anchor {
+    color: #68c281;
     text-transform: uppercase;
     font-size: 20px;
     text-align: center;
-    text-decoration: underline; }
+    text-decoration: underline;
+    padding-bottom: 1rem; }
+    div.dublin-schedule-page a.lodge-anchor:hover {
+      color: #cce086; }
   div.dublin-schedule-page div.schedule {
     margin: 1rem; }
     @supports (display: grid) {
@@ -48,7 +52,8 @@ div.dublin-schedule-page {
       div.dublin-schedule-page div.schedule div.schedule-date h2 {
         color: #fff;
         text-align: center;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        font-weight: 500; }
     div.dublin-schedule-page div.schedule div.schedule-time, div.dublin-schedule-page div.schedule div.schedule-details {
       width: 100%;
       margin: 0.5rem;
@@ -59,6 +64,12 @@ div.dublin-schedule-page {
           margin: 0; } }
       div.dublin-schedule-page div.schedule div.schedule-time p:first-child, div.dublin-schedule-page div.schedule div.schedule-time em, div.dublin-schedule-page div.schedule div.schedule-details p:first-child, div.dublin-schedule-page div.schedule div.schedule-details em {
         color: #236192; }
+    div.dublin-schedule-page div.schedule div.schedule-details p:first-child {
+      font-size: 23px;
+      font-weight: 700; }
+    div.dublin-schedule-page div.schedule div.schedule-details ol p:first-child {
+      font-size: 19px;
+      font-weight: 500; }
   div.dublin-schedule-page div.hotel-options div {
     margin: 0.5rem;
     padding: 1rem;

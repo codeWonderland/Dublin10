@@ -27,18 +27,25 @@ div.dublin-schedule-page
 	color: #236192;
 	font-size: 20px;
 	text-align: center;
-	max-width: 500px;
+	max-width: 650px;
+	font-weight: 500;
 	align-self: center;
 	margin-bottom: 2rem;
   }
 
-  a[href="#lodging-options"]
+  a.lodge-anchor
   {
-	color: #5cbd77;
+	color: #68c281;
 	text-transform: uppercase;
 	font-size: 20px;
 	text-align: center;
 	text-decoration: underline;
+	padding-bottom: 1rem;
+
+	&:hover
+	{
+	  color: #cce086;
+	}
   }
 
   div.schedule
@@ -75,6 +82,7 @@ div.dublin-schedule-page
 		color: #fff;
 		text-align: center;
 		text-transform: uppercase;
+		font-weight: 500;
 	  }
 	}
 
@@ -93,6 +101,21 @@ div.dublin-schedule-page
 	  p:first-child, em
 	  {
 		color: #236192;
+	  }
+	}
+
+	div.schedule-details
+	{
+	  p:first-child
+	  {
+		font-size: 23px;
+		font-weight: 700;
+	  }
+
+	  ol p:first-child
+	  {
+		font-size: 19px;
+		font-weight: 500;
 	  }
 	}
   }
