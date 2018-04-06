@@ -49,7 +49,8 @@ div.visit-landing-page {
         width: 100%;
         max-width: 480px; }
       div.visit-landing-page div.video-container div.video-overlay div.top-content h2.date-header {
-        text-align: center; }
+        text-align: center;
+        letter-spacing: 1px; }
         @media only screen and (min-width: 768px) {
           div.visit-landing-page div.video-container div.video-overlay div.top-content h2.date-header {
             color: white;
@@ -89,7 +90,7 @@ div.visit-landing-page {
         @supports (display: grid) {
           div.visit-landing-page div.intro-text {
             display: grid;
-            grid-template-columns: 175px auto;
+            grid-template-columns: 150px auto;
             grid-gap: 3rem; } } }
     @media only screen and (max-width: 768px) {
       div.visit-landing-page div.intro-text {
@@ -100,14 +101,14 @@ div.visit-landing-page {
       margin: auto; }
       @media only screen and (min-width: 768px) {
         div.visit-landing-page div.intro-text img {
-          margin-left: 1.5rem; } }
+          margin-left: 3rem; } }
     div.visit-landing-page div.intro-text div {
       padding: 4rem 5rem; }
       div.visit-landing-page div.intro-text div p, div.visit-landing-page div.intro-text div a {
         color: #fff;
         font-size: 23px;
         letter-spacing: 0.35px;
-        font-weight: 300;
+        font-weight: 500;
         margin: 0; }
         div.visit-landing-page div.intro-text div p a, div.visit-landing-page div.intro-text div a a {
           text-decoration: underline;
