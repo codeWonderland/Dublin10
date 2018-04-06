@@ -14,7 +14,8 @@ div.dublin-schedule-page {
   div.dublin-schedule-page h1.blue-header, div.dublin-schedule-page h1#lodging-options {
     text-transform: uppercase;
     color: #4159A7;
-    text-align: center; }
+    text-align: center;
+    font-weight: 500; }
   div.dublin-schedule-page p.intro-text {
     color: #4159A7;
     font-size: 20px;
