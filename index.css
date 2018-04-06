@@ -82,7 +82,7 @@ div.visit-landing-page {
           div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button:hover {
             background: #389852; }
   div.visit-landing-page div.intro-text {
-    background: #236192; }
+    background: #4159A7; }
     @media only screen and (min-width: 768px) {
       div.visit-landing-page div.intro-text {
         padding: 2rem; }
@@ -102,7 +102,7 @@ div.visit-landing-page {
         div.visit-landing-page div.intro-text img {
           margin-left: 1.5rem; } }
     div.visit-landing-page div.intro-text div {
-      padding: 4rem 2rem; }
+      padding: 4rem 5rem; }
       div.visit-landing-page div.intro-text div p, div.visit-landing-page div.intro-text div a {
         color: #fff;
         font-size: 23px;
@@ -125,12 +125,12 @@ div.visit-landing-page {
       font-weight: 500;
       padding-bottom: 0;
       margin-bottom: 0.5rem;
-      color: #236192; }
+      color: #4159A7; }
     div.visit-landing-page div.bottom-section p.mem-sub-head {
       font-weight: 300;
       font-size: 23px;
       letter-spacing: 0.35px;
-      color: #236192;
+      color: #4159A7;
       padding-bottom: 1rem;
       margin: auto;
       text-align: center;
