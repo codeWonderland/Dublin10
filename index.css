@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
 div.visit-landing-page {
   max-width: 1280px;
   width: 100%;
@@ -44,6 +45,9 @@ div.visit-landing-page {
       @media only screen and (max-width: 768px) {
         div.visit-landing-page div.video-container div.video-overlay {
           background: #e6e6e6; } }
+      div.visit-landing-page div.video-container div.video-overlay div.top-content img.dublin-logo {
+        width: 100%;
+        max-width: 480px; }
       div.visit-landing-page div.video-container div.video-overlay div.top-content h2.date-header {
         text-align: center; }
         @media only screen and (min-width: 768px) {
@@ -76,7 +80,7 @@ div.visit-landing-page {
             div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button {
               margin: 0.5rem; } }
           div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button:hover {
-            text-decoration: underline; }
+            background: #389852; }
   div.visit-landing-page div.intro-text {
     background: #236192; }
     @media only screen and (min-width: 768px) {
@@ -85,29 +89,52 @@ div.visit-landing-page {
         @supports (display: grid) {
           div.visit-landing-page div.intro-text {
             display: grid;
-            grid-template-columns: 150px auto;
-            grid-gap: 1rem; } } }
+            grid-template-columns: 175px auto;
+            grid-gap: 3rem; } } }
     @media only screen and (max-width: 768px) {
       div.visit-landing-page div.intro-text {
         padding: 1rem; } }
     div.visit-landing-page div.intro-text img {
-      width: 150px;
+      width: 100%;
       height: auto;
       margin: auto; }
-    div.visit-landing-page div.intro-text p, div.visit-landing-page div.intro-text a {
-      color: #fff;
-      font-size: 19px; }
-      div.visit-landing-page div.intro-text p a, div.visit-landing-page div.intro-text a a {
-        text-decoration: underline; }
-        div.visit-landing-page div.intro-text p a:hover, div.visit-landing-page div.intro-text a a:hover {
-          color: white; }
+      @media only screen and (min-width: 768px) {
+        div.visit-landing-page div.intro-text img {
+          margin-left: 1.5rem; } }
+    div.visit-landing-page div.intro-text div {
+      padding: 4rem 2rem; }
+      div.visit-landing-page div.intro-text div p, div.visit-landing-page div.intro-text div a {
+        color: #fff;
+        font-size: 23px;
+        letter-spacing: 0.35px;
+        font-weight: 300;
+        margin: 0; }
+        div.visit-landing-page div.intro-text div p a, div.visit-landing-page div.intro-text div a a {
+          text-decoration: underline;
+          color: #cce086;
+          text-transform: uppercase; }
+          div.visit-landing-page div.intro-text div p a:hover, div.visit-landing-page div.intro-text div a a:hover {
+            color: #68c281; }
   div.visit-landing-page div.bottom-section {
     background: #e6e6e6;
     padding-top: 1rem; }
     div.visit-landing-page div.bottom-section h2.mem-header {
       text-align: center;
-      font-size: 30px;
-      padding-bottom: 1rem; }
+      font-size: 32px;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding-bottom: 0;
+      margin-bottom: 0.5rem;
+      color: #236192; }
+    div.visit-landing-page div.bottom-section p.mem-sub-head {
+      font-weight: 300;
+      font-size: 23px;
+      letter-spacing: 0.35px;
+      color: #236192;
+      padding-bottom: 1rem;
+      margin: auto;
+      text-align: center;
+      max-width: 650px; }
     div.visit-landing-page div.bottom-section div.memory-container {
       margin: 16px; }
       @media only screen and (min-width: 768px) {
@@ -181,14 +208,17 @@ div.visit-landing-page {
                   box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.75); }
           div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory a.green-button {
             background: #5cbd77;
-            margin: 0 1rem;
             text-transform: uppercase;
             color: white;
-            border-radius: 15px;
-            padding: 0.5rem 1rem;
-            text-align: center; }
+            border-radius: 50px;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            text-align: center;
+            margin: 0 1rem; }
             div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory a.green-button:hover {
-              text-decoration: underline; }
+              background: #389852; }
         div.visit-landing-page div.bottom-section div.memory-container div.memory img {
           object-fit: cover;
           width: 100%;
@@ -196,6 +226,15 @@ div.visit-landing-page {
           max-width: unset; }
         div.visit-landing-page div.bottom-section div.memory-container div.memory p {
           font-size: 24px; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.photo-mem::after {
+          display: block;
+          content: '';
+          background: url(https://www.champlain.edu/Images/Dublin10/Dublin-10th-popup-icon.svg);
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          bottom: 10px;
+          right: 10px; }
         div.visit-landing-page div.bottom-section div.memory-container div.memory.story-mem {
           background: #5cbd77;
           color: white;
@@ -228,6 +267,15 @@ div.visit-landing-page {
         @media only screen and (max-width: 768px) {
           div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem {
             width: calc(100% - 1rem); } }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem::after {
+          display: block;
+          content: '';
+          background: url(https://www.champlain.edu/Images/Dublin10/Dublin-10th-popup-icon.svg);
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          bottom: 10px;
+          right: 10px; }
         div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story {
           position: absolute;
           top: 0;
@@ -262,6 +310,8 @@ div.visit-landing-page {
               top: 0;
               width: 100%;
               height: 100%; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem:hover::after {
+          display: none; }
         div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem:hover div.hover-story {
           display: block; }
 
@@ -302,7 +352,8 @@ div.visit-landing-page {
   max-width: 768px; }
   .remodal p {
     text-align: left; }
-  .remodal br {
-    line-height: 3; }
+    .remodal p br {
+      display: block;
+      margin: 10px 0; }
 
 /*# sourceMappingURL=index.css.map */
