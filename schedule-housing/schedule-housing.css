@@ -32,7 +32,7 @@ div.dublin-schedule-page {
     text-decoration: underline;
     padding-bottom: 1rem; }
     div.dublin-schedule-page a.lodge-anchor:hover {
-      background: #389852; }
+      color: #389852; }
   div.dublin-schedule-page div.schedule {
     margin: 1rem; }
     @supports (display: grid) {
