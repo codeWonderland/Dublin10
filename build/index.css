@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+div.visit-landing-page {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  background: white; }
+  div.visit-landing-page div.video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 650px;
+    overflow: hidden; }
+    @media only screen and (min-width: 786px) {
+      div.visit-landing-page div.video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+    @media only screen and (max-width: 768px) {
+      div.visit-landing-page div.video-container {
+        margin-top: -5px; } }
+    div.visit-landing-page div.video-container div.video-box {
+      width: 1280px;
+      height: auto;
+      max-height: 720px;
+      overflow: hidden; }
+      @media only screen and (max-width: 768px) {
+        div.visit-landing-page div.video-container div.video-box {
+          width: 100%; } }
+      div.visit-landing-page div.video-container div.video-box video.dynamic-video {
+        width: 100%;
+        height: auto; }
+    div.visit-landing-page div.video-container div.video-overlay {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      text-align: center; }
+      @media only screen and (min-width: 768px) {
+        div.visit-landing-page div.video-container div.video-overlay {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; } }
+      @media only screen and (max-width: 768px) {
+        div.visit-landing-page div.video-container div.video-overlay {
+          background: #e6e6e6;
+          margin-top: -5px; } }
+      div.visit-landing-page div.video-container div.video-overlay div.top-content img.dublin-logo {
+        width: 100%;
+        max-width: 480px; }
+      div.visit-landing-page div.video-container div.video-overlay div.top-content h2.date-header {
+        text-align: center;
+        letter-spacing: 1px; }
+        @media only screen and (min-width: 768px) {
+          div.visit-landing-page div.video-container div.video-overlay div.top-content h2.date-header {
+            color: white;
+            text-shadow: -2px 2px rgba(0, 0, 0, 0.6); } }
+        @media only screen and (max-width: 768px) {
+          div.visit-landing-page div.video-container div.video-overlay div.top-content h2.date-header {
+            color: #5cbd77; } }
+      div.visit-landing-page div.video-container div.video-overlay div.button-container {
+        max-width: 600px;
+        display: flex;
+        align-content: space-between; }
+        @media only screen and (max-width: 768px) {
+          div.visit-landing-page div.video-container div.video-overlay div.button-container {
+            flex-flow: column; } }
+        div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button {
+          background: #5cbd77;
+          text-transform: uppercase;
+          color: white;
+          border-radius: 50px;
+          font-size: 19px;
+          font-weight: 700;
+          letter-spacing: 0.5px;
+          padding: 0.5rem 1rem; }
+          @media only screen and (min-width: 768px) {
+            div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button {
+              margin: 0 1rem; } }
+          @media only screen and (max-width: 768px) {
+            div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button {
+              margin: 0.5rem; } }
+          div.visit-landing-page div.video-container div.video-overlay div.button-container a.green-button:hover {
+            background: #389852; }
+  div.visit-landing-page div.intro-text {
+    background: #4159A7; }
+    @media only screen and (min-width: 768px) {
+      div.visit-landing-page div.intro-text {
+        padding: 2rem; }
+        @supports (display: grid) {
+          div.visit-landing-page div.intro-text {
+            display: grid;
+            grid-template-columns: 150px auto;
+            grid-gap: 3rem; } } }
+    @media only screen and (max-width: 768px) {
+      div.visit-landing-page div.intro-text {
+        padding: 1rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-content: center; } }
+    div.visit-landing-page div.intro-text img {
+      width: 100%;
+      height: auto;
+      margin: auto; }
+      @media only screen and (min-width: 768px) {
+        div.visit-landing-page div.intro-text img {
+          margin-left: 3rem; } }
+      @media only screen and (max-width: 768px) {
+        div.visit-landing-page div.intro-text img {
+          max-width: 150px; } }
+    @media only screen and (min-width: 768px) {
+      div.visit-landing-page div.intro-text div {
+        padding: 4rem 5rem; } }
+    @media only screen and (max-width: 768px) {
+      div.visit-landing-page div.intro-text div {
+        padding: 2rem 1rem;
+        text-align: center; } }
+    div.visit-landing-page div.intro-text div p, div.visit-landing-page div.intro-text div a {
+      color: #fff;
+      font-size: 23px;
+      letter-spacing: 0.35px;
+      font-weight: 500;
+      margin: 0; }
+      div.visit-landing-page div.intro-text div p a, div.visit-landing-page div.intro-text div a a {
+        text-decoration: underline;
+        color: #cce086;
+        text-transform: uppercase; }
+        div.visit-landing-page div.intro-text div p a:hover, div.visit-landing-page div.intro-text div a a:hover {
+          color: #68c281; }
+  div.visit-landing-page div.bottom-section {
+    background: #e6e6e6;
+    padding-top: 1rem; }
+    div.visit-landing-page div.bottom-section h2.mem-header {
+      text-align: center;
+      font-size: 32px;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding-bottom: 0;
+      margin-bottom: 0.5rem;
+      color: #4159A7; }
+    div.visit-landing-page div.bottom-section p.mem-sub-head {
+      font-weight: 300;
+      font-size: 23px;
+      letter-spacing: 0.35px;
+      color: #4159A7;
+      padding: 0.5rem 2rem 1rem;
+      margin: auto;
+      text-align: center;
+      max-width: 650px; }
+    div.visit-landing-page div.bottom-section div.memory-container {
+      margin: 16px; }
+      @media only screen and (min-width: 768px) {
+        div.visit-landing-page div.bottom-section div.memory-container {
+          max-width: 1280px; }
+          @supports (display: grid) {
+            div.visit-landing-page div.bottom-section div.memory-container {
+              display: grid;
+              grid-template-columns: repeat(auto-fit, 300px);
+              grid-gap: 16px; } } }
+      div.visit-landing-page div.bottom-section div.memory-container div.memory {
+        height: 450px;
+        color: #fff;
+        overflow: hidden;
+        position: relative; }
+        @media only screen and (min-width: 768px) {
+          div.visit-landing-page div.bottom-section div.memory-container div.memory {
+            width: 300px; } }
+        @media only screen and (max-width: 768px) {
+          div.visit-landing-page div.bottom-section div.memory-container div.memory {
+            margin: 1rem 0; } }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory:not(.share-memory):hover {
+          cursor: pointer; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory {
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          flex-flow: column;
+          background: #fff; }
+          @media only screen and (max-width: 768px) {
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory {
+              width: 100%; } }
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle {
+            width: 175px;
+            height: 175px;
+            position: relative;
+            border-radius: 50%;
+            background-color: #5cbd77;
+            margin: 0 auto 2rem auto; }
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble {
+              background-color: #fff;
+              width: 100px;
+              height: 65px;
+              top: 52.5px;
+              left: 37.5px;
+              position: absolute;
+              border-radius: 10px; }
+              div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble:after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 0;
+                width: 0;
+                border-top: 17.5px solid #fff;
+                border-right: 20px solid transparent;
+                left: 17.5px;
+                bottom: -17.5px; }
+              div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble div.dot-holder {
+                width: 75px;
+                height: 7.5px;
+                margin: auto;
+                padding-left: 6px;
+                margin-top: 22.5px; }
+                div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory div.outer-circle div.chat-bubble div.dot-holder div.dot {
+                  width: 15px;
+                  border-radius: 50%;
+                  margin: 3px;
+                  height: 15px;
+                  background-color: #5cbd77;
+                  float: left;
+                  box-shadow: 0.5px 1px 1px rgba(0, 0, 0, 0.75); }
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory a.green-button {
+            background: #5cbd77;
+            text-transform: uppercase;
+            color: white;
+            border-radius: 50px;
+            font-size: 19px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 0.5rem 0;
+            text-align: center;
+            margin: 0 1rem; }
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.share-memory a.green-button:hover {
+              background: #389852; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory img {
+          -o-object-fit: cover;
+             object-fit: cover;
+          width: 100%;
+          height: 100%;
+          max-width: unset; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory p {
+          font-size: 24px; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.photo-mem::after {
+          display: block;
+          content: '';
+          background: url(https://www.champlain.edu/Images/Dublin10/Dublin-10th-popup-icon.svg);
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          bottom: 10px;
+          right: 10px; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.story-mem {
+          background: #5cbd77;
+          color: white;
+          transition: 0.2s ease-out;
+          text-align: center;
+          overflow: hidden; }
+          @media only screen and (min-width: 768px) {
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.story-mem {
+              padding: 2rem 2rem 4rem 2rem; } }
+          @media only screen and (max-width: 768px) {
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.story-mem {
+              width: calc(100% - 2rem);
+              padding: 1rem; } }
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.story-mem div.fade-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            color: #fff; }
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.story-mem div.fade-container:after {
+              position: absolute;
+              content: '';
+              display: block;
+              background: linear-gradient(transparent, #5cbd77);
+              z-index: 1;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%; }
+        @media only screen and (max-width: 768px) {
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem {
+            width: calc(100% - 1rem); } }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem::after {
+          display: block;
+          content: '';
+          background: url(https://www.champlain.edu/Images/Dublin10/Dublin-10th-popup-icon.svg);
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          bottom: 10px;
+          right: 10px; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          display: none;
+          background: #5cbd77;
+          transition: 0.2s ease-out;
+          text-align: center; }
+          @media only screen and (min-width: 768px) {
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story {
+              padding: 2rem 2rem 4rem 2rem; } }
+          @media only screen and (max-width: 768px) {
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story {
+              width: calc(100% - 2rem);
+              padding: 1rem; } }
+          div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story div.fade-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            color: #fff; }
+            div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem div.hover-story div.fade-container:after {
+              position: absolute;
+              content: '';
+              display: block;
+              background: linear-gradient(transparent, #5cbd77);
+              z-index: 1;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem:hover::after {
+          display: none; }
+        div.visit-landing-page div.bottom-section div.memory-container div.memory.both-mem:hover div.hover-story {
+          display: block; }
+
+#content.microsite {
+  margin: 0 !important;
+  width: 100% !important; }
+
+#side-nav {
+  display: none; }
+
+.userMarkup {
+  margin-top: -1rem !important; }
+  @media only screen and (min-width: 768px) {
+    .userMarkup {
+      padding: 0 !important; } }
+  @media only screen and (max-width: 768px) {
+    .userMarkup {
+      padding: 20px 0 !important; } }
+
+#column-container-1 {
+  width: 100%;
+  max-width: unset;
+  margin: 0; }
+
+#content-wrapper {
+  margin-top: -8px; }
+
+#outer-container, #inner-container {
+  background: #f6f6f6 !important; }
+
+.noMastHead #content.microsite, .microsite.noMastHead #content.microsite {
+  margin-top: 0 !important; }
+
+.microsite-ctas-wrapper {
+  z-index: 1000; }
+
+.remodal {
+  max-width: 768px; }
+  .remodal p {
+    text-align: left; }
+    .remodal p br {
+      display: block;
+      margin: 10px 0; }
+  @media only screen and (max-width: 768px) {
+    .remodal .content {
+      width: calc(100% - 40px); } }
+
+/*# sourceMappingURL=data:application/json;base64,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 */
